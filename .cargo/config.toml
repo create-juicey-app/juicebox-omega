@@ -1,0 +1,10 @@
+# Cargo configuration for performance optimizations
+
+[target.x86_64-unknown-linux-gnu]
+rustflags = [
+    "-C", "target-cpu=native",  # CPU-specific optimizations (SIMD, AVX2, etc.)
+]
+
+[build]
+# Increase parallel build jobs
+jobs = 8
